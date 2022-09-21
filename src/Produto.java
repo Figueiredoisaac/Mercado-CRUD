@@ -4,12 +4,14 @@ public class Produto {
 	private int id;
 	private String descricao;
 	private double preco;
+	private static int total;
 	
-	
-	public Produto(int id, String descricao, double preco){
-		setID(id);
+	public Produto(String descricao, double preco){
+		int novoId = Produto.getTotal() + 1; 
+		setID(novoId);
 		setDescricao(descricao);
-		setPreco(preco);	
+		setPreco(preco);
+		Produto.total ++;
 	}
 	
 	
@@ -31,7 +33,9 @@ public class Produto {
 	public void setPreco(double preco) {
 		this.preco = preco;
 	}
-	
+	public static int getTotal() {
+		return Produto.total;
+	}
 	@Override
 	public String toString() {
 		return this.getDescricao();
