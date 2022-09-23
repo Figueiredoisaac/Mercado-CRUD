@@ -18,6 +18,7 @@ public class CRUD {
 
 			switch (escolha) {
 			case 1:
+				try {
 				Scanner inputDescricao = new Scanner(System.in);
 				System.out.println("Nome do produto: ");
 				String descricao = inputDescricao.next();
@@ -30,24 +31,39 @@ public class CRUD {
 				int posicao = (p.getID()-1);
 				lista[posicao] = p;
 				System.out.println(lista[posicao]);
+				}catch (Exception ex){
+					System.out.println("Operação Inválida");
+					break;
+				}
 				break;
 
 			case 2:
+				try {
 				Scanner inputConsulta0 = new Scanner(System.in);
 				System.out.println("Insira o ID do produto: ");
 				int consulta0 = (inputConsulta0.nextInt()-1);
 				lista[consulta0] = null;
+				}catch (Exception ex){
+					System.out.println("Operação Inválida");
+					break;
+				}
 				break;
 
 			case 3:
+				try {
 				Scanner inputConsulta1 = new Scanner(System.in);
 				System.out.println("Insira o ID do produto: ");
 				int consulta1 = (inputConsulta1.nextInt()-1);
 				System.out.println("Nome do Produto: " + lista[consulta1].getDescricao() + "| ID do produto: " + lista[consulta1].getID()
 						+ "| Valor do produto: R$" + lista[consulta1].getPreco());
+				}catch (Exception ex){
+					System.out.println("Operação Inválida");
+					break;
+				}
 				break;
 
 			case 4:
+				try {
 				Scanner inputConsulta2 = new Scanner(System.in);
 				System.out.println("Insira o ID do produto: ");
 				int consulta2 = (inputConsulta2.nextInt()-1);
@@ -61,17 +77,25 @@ public class CRUD {
 				lista[consulta2].setPreco(novoValor);
 				System.out.println("Nome do Produto: " + lista[consulta2].getDescricao() + "| ID do produto: " + lista[consulta2].getID()
 				+ "| Valor do produto: R$" + lista[consulta2].getPreco());
-				
+				}catch (Exception ex){
+					System.out.println("Operação Inválida");
+					break;
+				}
 				break;
 
 			case 5:
+				try {
 				contador = false;
+				}catch (Exception ex){
+					System.out.println("Operação Inválida");
+					break;
+				}
 				break;
 			default:
 				System.out.println("Opção Inválida");
 				break;
 			}
 			
-		}System.out.println("fim do programa");
+		}System.out.println("Fim do Programa");
 	}
 }
