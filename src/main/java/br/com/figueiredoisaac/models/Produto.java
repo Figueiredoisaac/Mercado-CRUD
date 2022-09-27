@@ -1,3 +1,4 @@
+package main.java.br.com.figueiredoisaac.models;
 
 public class Produto {
 

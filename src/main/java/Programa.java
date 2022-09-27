@@ -1,6 +1,9 @@
+package main.java;
 import java.util.Scanner;
 
-public class CRUD {
+import main.java.br.com.figueiredoisaac.models.Produto;
+
+public class Programa {
 
 	public static void main(String[] args) {
 
