@@ -15,7 +15,6 @@ public class Produto {
 		Produto.total ++;
 	}
 	
-	
 	public String getDescricao() {
 		return descricao;
 	}
